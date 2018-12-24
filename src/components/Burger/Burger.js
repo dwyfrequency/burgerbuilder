@@ -7,7 +7,7 @@ const createIngredientArray = arr => {
   const [item, amount] = arr;
   // if there is only one item return it
   if (amount === 1) {
-    return [item];
+    return Array.isArray(item) ? item : [item];
   } else {
     // if there are multiple items, see if we have already gone through an iteration and put it in an array. Create new array with item array and an amount for the recursion
     return Array.isArray(item)
