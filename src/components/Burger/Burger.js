@@ -3,7 +3,7 @@ import BurgerIngredient from "./BurgerIngredient/BurgerIngredient";
 import classes from "./Burger.module.css";
 
 export default props => {
-  const transformedIngredientsArray = Object.keys(props.ingredients)
+  let transformedIngredientsArray = Object.keys(props.ingredients)
     .map((
       igKey // creates blank array with length of amount of ingredients
     ) =>
@@ -14,6 +14,11 @@ export default props => {
     .reduce((accum, item) => {
       return accum.concat(item);
     }, []);
+  if (transformedIngredientsArray.length === 0) {
+    return (transformedIngredientsArray = (
+      <p>Please start adding ingredients</p>
+    ));
+  }
   return (
     <div className={classes.Burger}>
       <BurgerIngredient type="bread-top" />
