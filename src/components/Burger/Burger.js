@@ -15,9 +15,7 @@ export default props => {
       return accum.concat(item);
     }, []);
   if (transformedIngredientsArray.length === 0) {
-    return (transformedIngredientsArray = (
-      <p>Please start adding ingredients</p>
-    ));
+    transformedIngredientsArray = <p>Please start adding ingredients</p>;
   }
   return (
     <div className={classes.Burger}>
