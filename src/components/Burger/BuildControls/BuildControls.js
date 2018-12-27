@@ -9,8 +9,11 @@ const controls = [
   { label: "Meat", type: "meat" }
 ];
 
-export default props => (
+const BuildControls = props => (
   <div className={classes.BuildControls}>
+    <p>
+      Current Price: <strong>${props.price.toFixed(2)}</strong>
+    </p>
     {controls.map((ctrl, idx) => (
       <BuildControl
         key={ctrl.label + idx}
@@ -20,5 +23,10 @@ export default props => (
         disabled={props.disabled[ctrl.type]}
       />
     ))}
+    <button className={classes.OrderButton} disabled={!props.purchaseable}>
+      ORDER NOW
+    </button>
   </div>
 );
+
+export default BuildControls;

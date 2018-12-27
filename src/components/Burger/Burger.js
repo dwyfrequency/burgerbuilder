@@ -2,7 +2,7 @@ import React from "react";
 import BurgerIngredient from "./BurgerIngredient/BurgerIngredient";
 import classes from "./Burger.module.css";
 
-export default props => {
+const Burger = props => {
   let transformedIngredientsArray = Object.keys(props.ingredients)
     .map((
       igKey // creates blank array with length of amount of ingredients
@@ -25,3 +25,5 @@ export default props => {
     </div>
   );
 };
+
+export default Burger;
