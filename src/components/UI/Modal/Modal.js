@@ -1,5 +1,5 @@
 import React from "react";
-import classes from "Module.module.css";
+import classes from "./Modal.module.css";
 
 const Modal = props => <div className={classes.Modal}>{props.children}</div>;
 
