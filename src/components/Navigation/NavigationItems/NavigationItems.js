@@ -3,7 +3,7 @@ import NavigationItem from "./NavigationItem/NavigationItem";
 
 const NavigationItems = props => (
   <ul>
-    <NavigationItem
+    <NavigationItem />
   </ul>
 );
 
