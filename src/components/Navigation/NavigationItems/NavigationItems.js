@@ -1,10 +1,14 @@
 import React from "react";
 import NavigationItem from "./NavigationItem/NavigationItem";
-import classes from "./NavigationItem.module.css";
+import classes from "./NavigationItems.module.css";
 
 const NavigationItems = props => (
   <ul className={classes.NavigationItems}>
-    <NavigationItem>A Link</NavigationItem>
+    {/* we can pass active instead of longer form active={true}, both are correct for boolean values. */}
+    <NavigationItem link="/" active>
+      Burger Builder
+    </NavigationItem>
+    <NavigationItem link="/">Checkout</NavigationItem>
   </ul>
 );
 
